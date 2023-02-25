@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Conponent/Navbar";
+import Search from "./Conponent/Search";
+import Contacts from "./Conponent/Contacts";
+import Chat from "./Conponent/Chat";
+// import ChatMobile from "./Conponent/ChatMobile";
+// import { Link, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="md:flex lg:h-screen md:h-screen">
+        <div className="">
+          {/* NAVABR */}
+          <Navbar />
+          {/* SEARCH */}
+          <Search />
+          {/* CONTACT */}
+          <Contacts />
+        </div>
+        {/* CHAT */}
+        <Chat />
+      </div>
+      {/* <Routes>
+        <Route path='/chat' element={<ChatMobile />} />
+      </Routes> */}
     </div>
   );
 }
 
-export default App;
+export default App
